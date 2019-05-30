@@ -3,8 +3,8 @@ import * as functions from "firebase-functions";
 // boolean to control ignoring slack bots to prevent loops
 const ignoreSlackBots = true;
 
-// list of excuses to respond with
-const excuses = [
+// list of responses that we could send back
+const responses = [
   'Cat poop sleeps for no one',
 ];
 
@@ -14,7 +14,7 @@ const triggerWords = [
 ];
 
 /**
- * Intercept slack messages and post a random excuse whenever
+ * Intercept slack messages and post a random response whenever
  * the message text contains one of the trigger words
  */
 export const helloSlack = functions.https.onRequest((request, response) => {
@@ -28,7 +28,7 @@ export const helloSlack = functions.https.onRequest((request, response) => {
     // if the message contains one of the trigger words,
     // grab a random excuse and reply back in the channel
     if (!ignoreMessage && triggered(request.body.text)) {
-      const excuse = excuses[Math.floor(Math.random() * excuses.length)];
+      const excuse = responses[Math.floor(Math.random() * responses.length)];
       response.status(200).send({ text: excuse });
     }
   } else {
