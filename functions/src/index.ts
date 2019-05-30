@@ -26,10 +26,10 @@ export const helloSlack = functions.https.onRequest((request, response) => {
     const ignoreMessage = ignoreSlackBots && request.body.user_id === 'USLACKBOT';
     
     // if the message contains one of the trigger words,
-    // grab a random excuse and reply back in the channel
+    // grab a random response and reply back in the channel
     if (!ignoreMessage && triggered(request.body.text)) {
-      const excuse = responses[Math.floor(Math.random() * responses.length)];
-      response.status(200).send({ text: excuse });
+      const text = responses[Math.floor(Math.random() * responses.length)];
+      response.status(200).send({ text });
     }
   } else {
     console.log('Request Error...');
