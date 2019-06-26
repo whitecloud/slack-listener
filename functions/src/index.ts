@@ -36,7 +36,8 @@ const responses = [
   'Having trouble with my eyes, and I’ve got goop at home that will help',
   'This is ridiculous — I’m literally falling asleep at my desk',
   'Dueling sound systems is making my head throb',
-  'Cat poop sleeps for no one'
+  'Cat poop sleeps for no one',
+  'No sleep last night, I’m literally falling asleep on my keyboard.  Gonna nap for a bit, then take a cat to the vet.  I’ll be on again later, and will be in the office (gasp) mañana…'
 ];
 
 // list of trigger words (case insensitive)
