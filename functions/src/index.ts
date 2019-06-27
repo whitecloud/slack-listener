@@ -43,7 +43,8 @@ const responses = [
 // list of trigger words (case insensitive)
 const triggerWords = [
   'WFH',
-  'Work from home',
+  'Work from',
+  'Working from',
   'I will be in afterwards'
 ];
 
