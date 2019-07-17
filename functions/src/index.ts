@@ -45,6 +45,7 @@ const triggerWords = [
   'WFH',
   'Work from',
   'Working from',
+  'Bouncing',
   'I will be in afterwards'
 ];
 
